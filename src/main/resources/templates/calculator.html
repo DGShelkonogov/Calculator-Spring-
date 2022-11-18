@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<form action="#" th:action="@{/calculate}" th:object="${calculator}" method="post">
+  <p>a: <input type="text" th:field="*{a}" /></p>
+  <p>action: <input type="text" th:field="*{action}" /></p>
+  <p>b: <input type="text" th:field="*{b}" /></p>
+  <p><input type="submit" value="Submit" /></p>
+</form>
+<p th:text="'Answer, ' + ${answer} + '!'" />
+</body>
+</html>
